@@ -1,0 +1,1037 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local BSSMacroHack = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local Name = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local Minimize = Instance.new("TextButton")
+local InnerFrame = Instance.new("Frame")
+local TabsButtons = Instance.new("Frame")
+local UIListLayout = Instance.new("UIListLayout")
+local Main = Instance.new("TextButton")
+local Farm = Instance.new("TextButton")
+local Quests = Instance.new("TextButton")
+local Mobs = Instance.new("TextButton")
+local Gear = Instance.new("TextButton")
+local Crafting = Instance.new("TextButton")
+local Settings = Instance.new("TextButton")
+local Extra = Instance.new("TextButton")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local Home = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local Farm_2 = Instance.new("Frame")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local Select = Instance.new("TextButton")
+local Clear = Instance.new("TextButton")
+local SwingTool = Instance.new("TextButton")
+local CollectTokens = Instance.new("TextButton")
+local TimePerField = Instance.new("TextBox")
+local LoopTime = Instance.new("TextBox")
+local Quests_2 = Instance.new("Frame")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local Mobs_2 = Instance.new("Frame")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local Gear_2 = Instance.new("Frame")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+local Crafting_2 = Instance.new("Frame")
+local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+local Settings_2 = Instance.new("Frame")
+local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
+local Extra_2 = Instance.new("Frame")
+local UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint")
+local Popup = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local FarmingPosFrame = Instance.new("Frame")
+local UIListLayout_3 = Instance.new("UIListLayout")
+local _1 = Instance.new("TextButton")
+local _2 = Instance.new("TextButton")
+local _3 = Instance.new("TextButton")
+local _4 = Instance.new("TextButton")
+local _5 = Instance.new("TextButton")
+local _6 = Instance.new("TextButton")
+local _7 = Instance.new("TextButton")
+local _8 = Instance.new("TextButton")
+local _9 = Instance.new("TextButton")
+local _10 = Instance.new("TextButton")
+local _11 = Instance.new("TextButton")
+local _12 = Instance.new("TextButton")
+local _13 = Instance.new("TextButton")
+local _14 = Instance.new("TextButton")
+local _15 = Instance.new("TextButton")
+local _16 = Instance.new("TextButton")
+local _17 = Instance.new("TextButton")
+
+--Properties:
+
+BSSMacroHack.Name = "BSSMacroHack"
+BSSMacroHack.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+BSSMacroHack.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+BSSMacroHack.ResetOnSpawn = false
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = BSSMacroHack
+MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+MainFrame.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+MainFrame.Size = UDim2.new(0.5, 0, 0.5, 0)
+
+Name.Name = "Name"
+Name.Parent = MainFrame
+Name.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name.BorderSizePixel = 0
+Name.Size = UDim2.new(0.23963134, 0, 0.125541121, 0)
+Name.Font = Enum.Font.SourceSansBold
+Name.Text = "Macro Hack!"
+Name.TextColor3 = Color3.fromRGB(255, 255, 255)
+Name.TextScaled = true
+Name.TextSize = 14.000
+Name.TextWrapped = true
+
+Close.Name = "Close"
+Close.Parent = MainFrame
+Close.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.939900041, 0, 0, 0)
+Close.Size = UDim2.new(0.0596652627, 0, 0.112098329, 0)
+Close.Font = Enum.Font.SourceSansBold
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+
+Minimize.Name = "Minimize"
+Minimize.Parent = MainFrame
+Minimize.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Minimize.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Minimize.BorderSizePixel = 0
+Minimize.Position = UDim2.new(0.884280562, 0, 0, 0)
+Minimize.Size = UDim2.new(0.059665259, 0, 0.112098329, 0)
+Minimize.Font = Enum.Font.SourceSansBold
+Minimize.Text = "_"
+Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.TextScaled = true
+Minimize.TextSize = 14.000
+Minimize.TextWrapped = true
+
+InnerFrame.Name = "InnerFrame"
+InnerFrame.Parent = MainFrame
+InnerFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+InnerFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InnerFrame.BorderSizePixel = 0
+InnerFrame.Position = UDim2.new(0.0388989411, 0, 0.16376631, 0)
+InnerFrame.Size = UDim2.new(0.919191837, 0, 0.805194795, 0)
+
+TabsButtons.Name = "TabsButtons"
+TabsButtons.Parent = InnerFrame
+TabsButtons.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+TabsButtons.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TabsButtons.BorderSizePixel = 0
+TabsButtons.Position = UDim2.new(-0.0423186347, 0, 0, 0)
+TabsButtons.Size = UDim2.new(0.260697842, 0, 1.03854835, 0)
+
+UIListLayout.Parent = TabsButtons
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0.0500000007, 0)
+
+Main.Name = "Main"
+Main.Parent = TabsButtons
+Main.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.0705882385, 0, 0, 0)
+Main.Size = UDim2.new(0.692307711, 0, 0.0697674453, 0)
+Main.Font = Enum.Font.SourceSansBold
+Main.Text = "Home"
+Main.TextColor3 = Color3.fromRGB(255, 255, 255)
+Main.TextScaled = true
+Main.TextSize = 14.000
+Main.TextWrapped = true
+
+Farm.Name = "Farm"
+Farm.Parent = TabsButtons
+Farm.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Farm.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Farm.BorderSizePixel = 0
+Farm.Position = UDim2.new(0.0705882385, 0, 0, 0)
+Farm.Size = UDim2.new(0.692307711, 0, 0.0697674453, 0)
+Farm.Font = Enum.Font.SourceSansBold
+Farm.Text = "Farm"
+Farm.TextColor3 = Color3.fromRGB(255, 255, 255)
+Farm.TextScaled = true
+Farm.TextSize = 14.000
+Farm.TextWrapped = true
+
+Quests.Name = "Quests"
+Quests.Parent = TabsButtons
+Quests.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Quests.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Quests.BorderSizePixel = 0
+Quests.Position = UDim2.new(0.0705882385, 0, 0, 0)
+Quests.Size = UDim2.new(0.692307711, 0, 0.0697674453, 0)
+Quests.Font = Enum.Font.SourceSansBold
+Quests.Text = "Quests"
+Quests.TextColor3 = Color3.fromRGB(255, 255, 255)
+Quests.TextScaled = true
+Quests.TextSize = 14.000
+Quests.TextWrapped = true
+
+Mobs.Name = "Mobs"
+Mobs.Parent = TabsButtons
+Mobs.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Mobs.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Mobs.BorderSizePixel = 0
+Mobs.Position = UDim2.new(0.0705882385, 0, 0, 0)
+Mobs.Size = UDim2.new(0.692307711, 0, 0.0697674453, 0)
+Mobs.Font = Enum.Font.SourceSansBold
+Mobs.Text = "Mobs"
+Mobs.TextColor3 = Color3.fromRGB(255, 255, 255)
+Mobs.TextScaled = true
+Mobs.TextSize = 14.000
+Mobs.TextWrapped = true
+
+Gear.Name = "Gear"
+Gear.Parent = TabsButtons
+Gear.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Gear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Gear.BorderSizePixel = 0
+Gear.Position = UDim2.new(0.0705882385, 0, 0, 0)
+Gear.Size = UDim2.new(0.692307711, 0, 0.0697674453, 0)
+Gear.Font = Enum.Font.SourceSansBold
+Gear.Text = "Gear"
+Gear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Gear.TextScaled = true
+Gear.TextSize = 14.000
+Gear.TextWrapped = true
+
+Crafting.Name = "Crafting"
+Crafting.Parent = TabsButtons
+Crafting.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Crafting.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Crafting.BorderSizePixel = 0
+Crafting.Position = UDim2.new(0.0705882385, 0, 0, 0)
+Crafting.Size = UDim2.new(0.692307711, 0, 0.0697674453, 0)
+Crafting.Font = Enum.Font.SourceSansBold
+Crafting.Text = "Crafting"
+Crafting.TextColor3 = Color3.fromRGB(255, 255, 255)
+Crafting.TextScaled = true
+Crafting.TextSize = 14.000
+Crafting.TextWrapped = true
+
+Settings.Name = "Settings"
+Settings.Parent = TabsButtons
+Settings.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Settings.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Settings.BorderSizePixel = 0
+Settings.Position = UDim2.new(0.0705882385, 0, 0, 0)
+Settings.Size = UDim2.new(0.692307711, 0, 0.0697674453, 0)
+Settings.Font = Enum.Font.SourceSansBold
+Settings.Text = "Settings"
+Settings.TextColor3 = Color3.fromRGB(255, 255, 255)
+Settings.TextScaled = true
+Settings.TextSize = 14.000
+Settings.TextWrapped = true
+
+Extra.Name = "Extra"
+Extra.Parent = TabsButtons
+Extra.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Extra.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Extra.BorderSizePixel = 0
+Extra.Position = UDim2.new(0.0705882385, 0, 0, 0)
+Extra.Size = UDim2.new(0.692307711, 0, 0.0697674453, 0)
+Extra.Font = Enum.Font.SourceSansBold
+Extra.Text = "Extra"
+Extra.TextColor3 = Color3.fromRGB(255, 255, 255)
+Extra.TextScaled = true
+Extra.TextSize = 14.000
+Extra.TextWrapped = true
+
+ScrollingFrame.Parent = InnerFrame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.218083784, 0, 0, 0)
+ScrollingFrame.Size = UDim2.new(0.779586852, 0, 1, 0)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 20, 0)
+
+UIListLayout_2.Parent = ScrollingFrame
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0.00999999978, 0)
+
+Home.Name = "Home"
+Home.Parent = ScrollingFrame
+Home.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Home.BackgroundTransparency = 1.000
+Home.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Home.BorderSizePixel = 0
+Home.Size = UDim2.new(0.945337594, 0, 0.0489869341, 0)
+
+TextLabel.Parent = Home
+TextLabel.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0, 0, 0.123655915, 0)
+TextLabel.Size = UDim2.new(0.680272102, 0, 0.113501534, 0)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Welcome: USERNAME"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UIAspectRatioConstraint.Parent = TextLabel
+UIAspectRatioConstraint.AspectRatio = 9.230
+
+UIAspectRatioConstraint_2.Parent = Home
+UIAspectRatioConstraint_2.AspectRatio = 1.540
+
+Farm_2.Name = "Farm"
+Farm_2.Parent = ScrollingFrame
+Farm_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Farm_2.BackgroundTransparency = 1.000
+Farm_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Farm_2.BorderSizePixel = 0
+Farm_2.Position = UDim2.new(-0.28295821, 0, -0.106940076, 0)
+Farm_2.Size = UDim2.new(0.945337594, 0, 0.0489869341, 0)
+
+UIAspectRatioConstraint_3.Parent = Farm_2
+UIAspectRatioConstraint_3.AspectRatio = 1.540
+
+Select.Name = "Select"
+Select.Parent = Farm_2
+Select.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Select.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Select.BorderSizePixel = 0
+Select.Position = UDim2.new(0.0408163257, 0, 0.0209523812, 0)
+Select.Size = UDim2.new(0.255102038, 0, 0.130952388, 0)
+Select.Font = Enum.Font.SourceSansBold
+Select.Text = "Select Farming Positions!"
+Select.TextColor3 = Color3.fromRGB(255, 255, 255)
+Select.TextScaled = true
+Select.TextSize = 14.000
+Select.TextWrapped = true
+
+Clear.Name = "Clear"
+Clear.Parent = Farm_2
+Clear.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clear.BorderSizePixel = 0
+Clear.Position = UDim2.new(0.0408163257, 0, 0.193809524, 0)
+Clear.Size = UDim2.new(0.255102038, 0, 0.130952388, 0)
+Clear.Font = Enum.Font.SourceSansBold
+Clear.Text = "Clear All Farming Positions!"
+Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clear.TextScaled = true
+Clear.TextSize = 14.000
+Clear.TextWrapped = true
+
+SwingTool.Name = "SwingTool"
+SwingTool.Parent = Farm_2
+SwingTool.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+SwingTool.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SwingTool.BorderSizePixel = 0
+SwingTool.Position = UDim2.new(0.0408163257, 0, 0.382380962, 0)
+SwingTool.Size = UDim2.new(0.255102038, 0, 0.130952388, 0)
+SwingTool.Font = Enum.Font.SourceSansBold
+SwingTool.Text = "Auto Swing: Off"
+SwingTool.TextColor3 = Color3.fromRGB(255, 255, 255)
+SwingTool.TextScaled = true
+SwingTool.TextSize = 14.000
+SwingTool.TextWrapped = true
+
+CollectTokens.Name = "CollectTokens"
+CollectTokens.Parent = Farm_2
+CollectTokens.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+CollectTokens.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CollectTokens.BorderSizePixel = 0
+CollectTokens.Position = UDim2.new(0.0408163257, 0, 0.555238008, 0)
+CollectTokens.Size = UDim2.new(0.255102038, 0, 0.130952388, 0)
+CollectTokens.Font = Enum.Font.SourceSansBold
+CollectTokens.Text = "Collect Tokens While Farming : Off"
+CollectTokens.TextColor3 = Color3.fromRGB(255, 255, 255)
+CollectTokens.TextScaled = true
+CollectTokens.TextSize = 14.000
+CollectTokens.TextWrapped = true
+
+TimePerField.Name = "TimePerField"
+TimePerField.Parent = Farm_2
+TimePerField.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+TimePerField.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TimePerField.BorderSizePixel = 0
+TimePerField.Position = UDim2.new(0.693877578, 0, 0.0209523812, 0)
+TimePerField.Size = UDim2.new(0.255102038, 0, 0.130952388, 0)
+TimePerField.Font = Enum.Font.SourceSansBold
+TimePerField.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+TimePerField.PlaceholderText = "Time Collecting in field! (In Sec!)"
+TimePerField.Text = ""
+TimePerField.TextColor3 = Color3.fromRGB(255, 255, 255)
+TimePerField.TextScaled = true
+TimePerField.TextSize = 14.000
+TimePerField.TextWrapped = true
+
+LoopTime.Name = "LoopTime"
+LoopTime.Parent = Farm_2
+LoopTime.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+LoopTime.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LoopTime.BorderSizePixel = 0
+LoopTime.Position = UDim2.new(0.693877578, 0, 0.193809524, 0)
+LoopTime.Size = UDim2.new(0.255102038, 0, 0.130952388, 0)
+LoopTime.Font = Enum.Font.SourceSansBold
+LoopTime.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+LoopTime.PlaceholderText = "Loops!"
+LoopTime.Text = ""
+LoopTime.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoopTime.TextScaled = true
+LoopTime.TextSize = 14.000
+LoopTime.TextWrapped = true
+
+Quests_2.Name = "Quests"
+Quests_2.Parent = ScrollingFrame
+Quests_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Quests_2.BackgroundTransparency = 1.000
+Quests_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Quests_2.BorderSizePixel = 0
+Quests_2.Size = UDim2.new(0.945337594, 0, 0.0489869341, 0)
+
+UIAspectRatioConstraint_4.Parent = Quests_2
+UIAspectRatioConstraint_4.AspectRatio = 1.540
+
+Mobs_2.Name = "Mobs"
+Mobs_2.Parent = ScrollingFrame
+Mobs_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Mobs_2.BackgroundTransparency = 1.000
+Mobs_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Mobs_2.BorderSizePixel = 0
+Mobs_2.Size = UDim2.new(0.945337594, 0, 0.0489869341, 0)
+
+UIAspectRatioConstraint_5.Parent = Mobs_2
+UIAspectRatioConstraint_5.AspectRatio = 1.540
+
+Gear_2.Name = "Gear"
+Gear_2.Parent = ScrollingFrame
+Gear_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gear_2.BackgroundTransparency = 1.000
+Gear_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Gear_2.BorderSizePixel = 0
+Gear_2.Size = UDim2.new(0.945337594, 0, 0.0489869341, 0)
+
+UIAspectRatioConstraint_6.Parent = Gear_2
+UIAspectRatioConstraint_6.AspectRatio = 1.540
+
+Crafting_2.Name = "Crafting"
+Crafting_2.Parent = ScrollingFrame
+Crafting_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Crafting_2.BackgroundTransparency = 1.000
+Crafting_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Crafting_2.BorderSizePixel = 0
+Crafting_2.Size = UDim2.new(0.945337594, 0, 0.0489869341, 0)
+
+UIAspectRatioConstraint_7.Parent = Crafting_2
+UIAspectRatioConstraint_7.AspectRatio = 1.540
+
+Settings_2.Name = "Settings"
+Settings_2.Parent = ScrollingFrame
+Settings_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings_2.BackgroundTransparency = 1.000
+Settings_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Settings_2.BorderSizePixel = 0
+Settings_2.Size = UDim2.new(0.945337594, 0, 0.0489869341, 0)
+
+UIAspectRatioConstraint_8.Parent = Settings_2
+UIAspectRatioConstraint_8.AspectRatio = 1.540
+
+Extra_2.Name = "Extra"
+Extra_2.Parent = ScrollingFrame
+Extra_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Extra_2.BackgroundTransparency = 1.000
+Extra_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Extra_2.BorderSizePixel = 0
+Extra_2.Size = UDim2.new(0.945337594, 0, 0.0489869341, 0)
+
+UIAspectRatioConstraint_9.Parent = Extra_2
+UIAspectRatioConstraint_9.AspectRatio = 1.540
+
+Popup.Name = "Popup"
+Popup.Parent = BSSMacroHack
+Popup.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+Popup.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Popup.BorderSizePixel = 0
+Popup.Position = UDim2.new(0, 0, 0.83116883, 0)
+Popup.Size = UDim2.new(0.114055298, 0, 0.16883117, 0)
+Popup.Visible = false
+
+TextLabel_2.Parent = Popup
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.0938706025, 0, 0.0777955651, 0)
+TextLabel_2.Size = UDim2.new(0.804484665, 0, 0.832460821, 0)
+TextLabel_2.Font = Enum.Font.SourceSansBold
+TextLabel_2.Text = "The UI has been hidden press LeftCtrl + O to reopen!"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+FarmingPosFrame.Name = "FarmingPosFrame"
+FarmingPosFrame.Parent = BSSMacroHack
+FarmingPosFrame.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+FarmingPosFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FarmingPosFrame.BorderSizePixel = 0
+FarmingPosFrame.Position = UDim2.new(0.159932658, 0, 0.248739496, 0)
+FarmingPosFrame.Size = UDim2.new(0.0841750875, 0, 0.500840366, 0)
+
+UIListLayout_3.Parent = FarmingPosFrame
+UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_3.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout_3.Padding = UDim.new(0.0199999996, 0)
+
+_1.Name = "1"
+_1.Parent = FarmingPosFrame
+_1.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_1.BorderSizePixel = 0
+_1.Position = UDim2.new(0.180000007, 0, 0.865907013, 0)
+_1.Size = UDim2.new(0.75, 0, 0.0369127505, 0)
+_1.Font = Enum.Font.SourceSansBold
+_1.Text = "Save Pos: 1"
+_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+_1.TextSize = 14.000
+
+_2.Name = "2"
+_2.Parent = FarmingPosFrame
+_2.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_2.BorderSizePixel = 0
+_2.Position = UDim2.new(0.180000007, 0, 0.934166491, 0)
+_2.Size = UDim2.new(0.75, 0, 0.0369127505, 0)
+_2.Font = Enum.Font.SourceSansBold
+_2.Text = "Save Pos: 2"
+_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+_2.TextSize = 14.000
+
+_3.Name = "3"
+_3.Parent = FarmingPosFrame
+_3.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_3.BorderSizePixel = 0
+_3.Position = UDim2.new(0.180000007, 0, 1.00242579, 0)
+_3.Size = UDim2.new(0.75, 0, 0.0369127505, 0)
+_3.Font = Enum.Font.SourceSansBold
+_3.Text = "Save Pos: 3"
+_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+_3.TextSize = 14.000
+
+_4.Name = "4"
+_4.Parent = FarmingPosFrame
+_4.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_4.BorderSizePixel = 0
+_4.Position = UDim2.new(0.180000007, 0, 1.07068515, 0)
+_4.Size = UDim2.new(0.75, 0, 0.0369127505, 0)
+_4.Font = Enum.Font.SourceSansBold
+_4.Text = "Save Pos: 4"
+_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+_4.TextSize = 14.000
+
+_5.Name = "5"
+_5.Parent = FarmingPosFrame
+_5.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_5.BorderSizePixel = 0
+_5.Position = UDim2.new(0.180000007, 0, 1.13894475, 0)
+_5.Size = UDim2.new(0.75, 0, 0.0369127505, 0)
+_5.Font = Enum.Font.SourceSansBold
+_5.Text = "Save Pos: 5"
+_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+_5.TextSize = 14.000
+
+_6.Name = "6"
+_6.Parent = FarmingPosFrame
+_6.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_6.BorderSizePixel = 0
+_6.Position = UDim2.new(0.180000007, 0, 1.2072041, 0)
+_6.Size = UDim2.new(0.75, 0, 0.0369127505, 0)
+_6.Font = Enum.Font.SourceSansBold
+_6.Text = "Save Pos: 6"
+_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+_6.TextSize = 14.000
+
+_7.Name = "7"
+_7.Parent = FarmingPosFrame
+_7.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_7.BorderSizePixel = 0
+_7.Position = UDim2.new(0.180000007, 0, 1.27546358, 0)
+_7.Size = UDim2.new(0.75, 0, 0.0369127505, 0)
+_7.Font = Enum.Font.SourceSansBold
+_7.Text = "Save Pos: 7"
+_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+_7.TextSize = 14.000
+
+_8.Name = "8"
+_8.Parent = FarmingPosFrame
+_8.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_8.BorderSizePixel = 0
+_8.Position = UDim2.new(0.180000007, 0, 1.34372294, 0)
+_8.Size = UDim2.new(0.75, 0, 0.0369127505, 0)
+_8.Font = Enum.Font.SourceSansBold
+_8.Text = "Save Pos: 8"
+_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+_8.TextSize = 14.000
+
+_9.Name = "9"
+_9.Parent = FarmingPosFrame
+_9.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_9.BorderSizePixel = 0
+_9.Position = UDim2.new(0.180000007, 0, 1.41198242, 0)
+_9.Size = UDim2.new(0.75, 0, 0.0369127505, 0)
+_9.Font = Enum.Font.SourceSansBold
+_9.Text = "Save Pos: 9"
+_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+_9.TextSize = 14.000
+
+_10.Name = "10"
+_10.Parent = FarmingPosFrame
+_10.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_10.BorderSizePixel = 0
+_10.Position = UDim2.new(0.180000007, 0, 1.48024178, 0)
+_10.Size = UDim2.new(0.75, 0, 0.0369127505, 0)
+_10.Font = Enum.Font.SourceSansBold
+_10.Text = "Save Pos: 10"
+_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+_10.TextSize = 14.000
+
+_11.Name = "11"
+_11.Parent = FarmingPosFrame
+_11.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_11.BorderSizePixel = 0
+_11.Position = UDim2.new(0.180000007, 0, 1.54850125, 0)
+_11.Size = UDim2.new(0.75, 0, 0.0369127505, 0)
+_11.Font = Enum.Font.SourceSansBold
+_11.Text = "Save Pos: 11"
+_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+_11.TextSize = 14.000
+
+_12.Name = "12"
+_12.Parent = FarmingPosFrame
+_12.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_12.BorderSizePixel = 0
+_12.Position = UDim2.new(0.180000007, 0, 1.61676049, 0)
+_12.Size = UDim2.new(0.75, 0, 0.0369127505, 0)
+_12.Font = Enum.Font.SourceSansBold
+_12.Text = "Save Pos: 12"
+_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+_12.TextSize = 14.000
+
+_13.Name = "13"
+_13.Parent = FarmingPosFrame
+_13.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_13.BorderSizePixel = 0
+_13.Position = UDim2.new(0.180000007, 0, 1.68501985, 0)
+_13.Size = UDim2.new(0.75, 0, 0.0369127505, 0)
+_13.Font = Enum.Font.SourceSansBold
+_13.Text = "Save Pos: 13"
+_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+_13.TextSize = 14.000
+
+_14.Name = "14"
+_14.Parent = FarmingPosFrame
+_14.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_14.BorderSizePixel = 0
+_14.Position = UDim2.new(0.180000007, 0, 1.75327933, 0)
+_14.Size = UDim2.new(0.75, 0, 0.0369127505, 0)
+_14.Font = Enum.Font.SourceSansBold
+_14.Text = "Save Pos: 14"
+_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+_14.TextSize = 14.000
+
+_15.Name = "15"
+_15.Parent = FarmingPosFrame
+_15.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_15.BorderSizePixel = 0
+_15.Position = UDim2.new(0.180000007, 0, 1.82153869, 0)
+_15.Size = UDim2.new(0.75, 0, 0.0369127505, 0)
+_15.Font = Enum.Font.SourceSansBold
+_15.Text = "Save Pos: 15"
+_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+_15.TextSize = 14.000
+
+_16.Name = "16"
+_16.Parent = FarmingPosFrame
+_16.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_16.BorderSizePixel = 0
+_16.Position = UDim2.new(0.180000007, 0, 1.8897984, 0)
+_16.Size = UDim2.new(0.75, 0, 0.0369127505, 0)
+_16.Font = Enum.Font.SourceSansBold
+_16.Text = "Save Pos: 16"
+_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+_16.TextSize = 14.000
+
+_17.Name = "17"
+_17.Parent = FarmingPosFrame
+_17.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_17.BorderSizePixel = 0
+_17.Position = UDim2.new(0.180000007, 0, 1.95805776, 0)
+_17.Size = UDim2.new(0.74999994, 0, 0.0369127467, 0)
+_17.Font = Enum.Font.SourceSansBold
+_17.Text = "Save Pos: 17"
+_17.TextColor3 = Color3.fromRGB(255, 255, 255)
+_17.TextSize = 14.000
+
+-- Scripts:
+
+local function UGAJKTI_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
+
+	local CloseButton = script.Parent
+	local BSSMacroHack = script.Parent.Parent
+	
+	CloseButton.MouseButton1Click:Connect(function()
+		BSSMacroHack:Destroy()
+	end)
+	
+end
+coroutine.wrap(UGAJKTI_fake_script)()
+local function SDLR_fake_script() -- Minimize.LocalScript 
+	local script = Instance.new('LocalScript', Minimize)
+
+	local MinimizeButton = script.Parent
+	local BSSMacroHackStarterUI = MinimizeButton.Parent.Parent
+	local BSSMacroHackFrame = BSSMacroHackStarterUI.MainFrame
+	local PopUp = BSSMacroHackStarterUI.Popup
+	
+	local UIP = game:GetService("UserInputService")
+	
+	MinimizeButton.MouseButton1Click:Connect(function()
+		BSSMacroHackFrame.Visible = false
+		PopUp.Visible = true wait(5) PopUp.Visible = false
+	end)
+	
+	UIP.InputBegan:Connect(function(input)
+		if input.KeyCode == Enum.KeyCode.LeftControl and BSSMacroHackFrame.Visible == false then
+			BSSMacroHackFrame.Visible = true
+		end
+	end)
+end
+coroutine.wrap(SDLR_fake_script)()
+local function TWYQ_fake_script() -- Farm_2.LocalScript 
+	local script = Instance.new('LocalScript', Farm_2)
+
+	local screenUi = script:FindFirstAncestorOfClass("ScreenGui")
+	
+	if not screenUi then
+		repeat task.wait()
+			screenUi = script:FindFirstAncestorOfClass("ScreenGui")
+		until screenUi
+	end
+	
+	local PosPicker = script.Parent.Select
+	local PosFrame = screenUi:WaitForChild("FarmingPosFrame")
+	
+	PosPicker.MouseButton1Click:Connect(function()
+		PosFrame.Visible = not PosFrame.Visible
+	end)
+	
+end
+coroutine.wrap(TWYQ_fake_script)()
+local function NMQOOLI_fake_script() -- BSSMacroHack.Tabs 
+	local script = Instance.new('LocalScript', BSSMacroHack)
+
+	local TabsButtons = script.Parent.MainFrame.InnerFrame.TabsButtons
+	local ScrollingFrame = script.Parent.MainFrame.InnerFrame.ScrollingFrame
+	
+	for _, button in ipairs(TabsButtons:GetChildren()) do
+		if button:IsA("TextButton") then
+			button.MouseButton1Click:Connect(function()
+				if button.Name == "Main" then
+					ScrollingFrame.CanvasPosition = Vector2.new(0, 0)
+				elseif button.Name == "Farm" then
+					ScrollingFrame.CanvasPosition = Vector2.new(0, 230)
+				elseif button.Name == "Quests" then
+					ScrollingFrame.CanvasPosition = Vector2.new(0, 460)
+				elseif button.Name == "Mobs" then
+					ScrollingFrame.CanvasPosition = Vector2.new(0, 690)
+				elseif button.Name == "Gear" then
+					ScrollingFrame.CanvasPosition = Vector2.new(0, 920)
+				elseif button.Name == "Crafting" then
+					ScrollingFrame.CanvasPosition = Vector2.new(0, 1140)
+				elseif button.Name == "Settings" then
+					ScrollingFrame.CanvasPosition = Vector2.new(0, 1370)
+				elseif button.Name == "Extra" then
+					ScrollingFrame.CanvasPosition = Vector2.new(0, 1600)
+				end
+			end)
+		end
+	end
+	
+end
+coroutine.wrap(NMQOOLI_fake_script)()
+local function BEQOIM_fake_script() -- BSSMacroHack.LocalScript 
+	local script = Instance.new('LocalScript', BSSMacroHack)
+
+	local UserInputService = game:GetService("UserInputService")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local Players = game:GetService("Players")
+	local Workspace = game:GetService("Workspace")
+	local RunService = game:GetService("RunService")
+	
+	local player = Players.LocalPlayer
+	local playerGui = player:WaitForChild("PlayerGui")
+	local character = player.Character or player.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local spawnPosCFrame = player:WaitForChild("SpawnPos").Value
+	local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	local cap = player:WaitForChild("CoreStats"):WaitForChild("Capacity").value
+	local ToolCollect = require(ReplicatedStorage.Events).ClientCall
+	local PlayerHiveCommand = require(ReplicatedStorage.Events).ClientCall
+	print(cap)
+	local savedPositions = {}
+	local farmingActive = false
+	local moveDistance = 15
+	local walkDuration = 1.5
+	local turnAngle = 90
+	local cycleCount = 10
+	local fieldTime = 60
+	local alwaysPresentTokens = {}
+	local collectionRadius = 10 -- Distance within which tokens are collected
+	
+	-- Assuming you have a ScreenGui named 'BSSMacroHack' and a Frame named 'FarmingPosFrame'
+	local screenGui = playerGui:WaitForChild("BSSMacroHack")
+	local frame = screenGui:WaitForChild("FarmingPosFrame")
+	
+	-- Connect buttons to save positions
+	for i = 1, 17 do
+		local button = frame:WaitForChild(tostring(i)) -- Buttons named "1", "2", etc.
+		button.MouseButton1Click:Connect(function()
+			savedPositions[i] = player.Character.HumanoidRootPart.CFrame
+			print("Position " .. i .. " saved: " .. tostring(savedPositions[i]))
+		end)
+	end
+	
+	--//clear saved positions
+	local clearPositionBtn =screenGui:FindFirstChild("Clear", true)
+	clearPositionBtn.MouseButton1Click:Connect(function()
+		farmingActive = false
+		task.wait(0.05)
+		savedPositions = {}
+		print("Cleared saved positions; stopped farming.")
+	end)
+	
+	-- Connect TextBox to enter the cycle count
+	local cycleBox = screenGui:FindFirstChild("LoopTime", true) -- Assuming your TextBox is named "CycleCountBox"
+	cycleBox.Text = tostring(cycleCount)
+	
+	cycleBox.FocusLost:Connect(function(enterPressed)
+		if enterPressed then
+			local newCount = tonumber(cycleBox.Text)
+			if newCount and newCount > 0 then
+				cycleCount = newCount
+				print("Cycle count updated to: " .. cycleCount)
+			else
+				cycleBox.Text = tostring(cycleCount)
+				print("Invalid cycle count entered.")
+			end
+		end
+	end)
+	
+	-- Connect TextBox to enter the field time
+	local fieldTimeBox = screenGui:FindFirstChild("TimePerField", true) -- Assuming your TextBox is named "FieldTimeBox"
+	fieldTimeBox.Text = tostring(fieldTime)
+	
+	fieldTimeBox.FocusLost:Connect(function(enterPressed)
+		if enterPressed then
+			local newTime = tonumber(fieldTimeBox.Text)
+			if newTime and newTime > 0 then
+				fieldTime = newTime
+				print("Field time updated to: " .. fieldTime .. " seconds")
+			else
+				fieldTimeBox.Text = tostring(fieldTime)
+				print("Invalid field time entered.")
+			end
+		end
+	end)
+	
+	-- Function to move the player forward by a specified distance
+	local function moveForward()
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+		local initialPosition = humanoidRootPart.Position
+		local direction = humanoidRootPart.CFrame.LookVector
+		humanoid:MoveTo(initialPosition + direction * moveDistance)
+		wait(walkDuration)
+	end
+	
+	-- Function to turn the player left by a specified angle
+	local function turnLeft()
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+		local currentCFrame = humanoidRootPart.CFrame
+		humanoidRootPart.CFrame = currentCFrame * CFrame.Angles(0, math.rad(-turnAngle), 0)
+	end
+	
+	-- Function to make the player walk in a square pattern for a specified amount of time
+	local function walkInSquare()
+		local endTime = tick() + fieldTime
+		while tick() < endTime do
+			if not farmingActive then return end
+			moveForward()
+			turnLeft()
+			wait(0.5)
+			ToolCollect("ToolCollect")
+		end
+	end
+	
+	-- Function to move the player towards a specified token
+	local function walkToToken(token)
+		local targetPosition = token.Position
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+		local direction = (targetPosition - humanoidRootPart.Position).unit  -- Unit vector direction
+	
+		humanoid:MoveTo(targetPosition)  -- Direct the humanoid to move towards the token
+	
+		while (humanoidRootPart.Position - targetPosition).Magnitude > collectionRadius do
+			wait(0.1)  -- Check periodically until the player reaches the token
+		end
+	end
+	
+	-- Function to collect a specified token
+	local function collectToken(token)
+		if token and token:IsA("BasePart") then
+			local distance = (token.Position - humanoidRootPart.Position).Magnitude
+			if distance <= collectionRadius then
+				walkToToken(token)  -- Walk to the token
+				print("Token collected: " .. token.Name)
+				-- Perform collection logic here if necessary (e.g., increment inventory, remove token)
+			end
+		end
+	end
+	
+	-- Function to teleport the player to a specified position
+	local function teleportTo(cframe)
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+		humanoidRootPart.CFrame = cframe
+	end
+	
+	-- Function to check if the player's pollen is zero
+	local function isPollenZero()
+		local coreStats = player:WaitForChild("CoreStats")
+		local pollen = coreStats:FindFirstChild("Pollen")
+		return pollen and pollen.Value <= 0
+	end
+	
+	-- Function to check if the player's pollen is at max capacity
+	local function isPollenMax()
+		local pol = player:WaitForChild("CoreStats"):WaitForChild("pollen").value
+		print(pol-cap)
+		if pol-cap <= 0 then 
+			teleportCycleCount = cycleCount
+		end
+	end
+	
+	-- Function to start the farming process
+	local function startFarming()
+		farmingActive = true
+		local teleportCycleCount = 0
+		while farmingActive do
+			for _, cframe in pairs(savedPositions) do
+				if not farmingActive then return end
+				teleportTo(cframe)
+				walkInSquare()
+				wait(0.5)
+				isPollenMax()
+				teleportCycleCount = teleportCycleCount + 1
+	
+				if (teleportCycleCount >= cycleCount) then
+					print(cycleCount .. " cycles completed. Teleporting to SpawnPos.")
+					teleportTo(spawnPosCFrame)
+					wait(1)
+					PlayerHiveCommand("PlayerHiveCommand", "ToggleHoneyMaking")
+	
+					while not isPollenZero() do
+						wait(1)
+					end
+	
+					wait(10)
+					PlayerHiveCommand("PlayerHiveCommand", "ToggleHoneyMaking")
+					print("Conversion completed. Waiting 10 seconds.")
+	
+					teleportCycleCount = 0
+				end
+			end
+			
+		end
+	end
+	
+	-- Function to stop the farming process
+	local function stopFarming()
+		farmingActive = false
+		print("Farming stopped.")
+	end
+	
+	-- Function to check if a token is new (not always present)
+	local function isNewToken(token)
+		return not alwaysPresentTokens[token]
+	end
+	
+	-- Connect function to check for new tokens during each frame
+	RunService.Heartbeat:Connect(function()
+		if farmingActive then
+			for _, token in pairs(Workspace.Collectibles:GetChildren()) do
+				if isNewToken(token) then
+					collectToken(token)
+				end
+			end
+		end
+	end)
+	
+	-- Connect function to handle new tokens as they are added
+	Workspace.Collectibles.ChildAdded:Connect(function(token)
+		if farmingActive and isNewToken(token) then
+			collectToken(token)
+		end
+	end)
+	
+	-- Connect function to handle user input for starting and stopping farming
+	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+		if not gameProcessedEvent then
+			if input.KeyCode == Enum.KeyCode.F and input:IsModifierKeyDown(Enum.ModifierKey.Ctrl) then
+				print("Detected Keys Pressed!")
+				if not farmingActive then
+					print("Starting farming!")
+					startFarming()
+				else
+					print("Already farming!")
+				end
+			elseif input.KeyCode == Enum.KeyCode.X and input:IsModifierKeyDown(Enum.ModifierKey.Ctrl) then
+				stopFarming()
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(BEQOIM_fake_script)()
